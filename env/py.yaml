@@ -1,0 +1,21 @@
+---
+ # defines where the various paths for the project can be found
+ # certain of those can have program specific subdirectories (specified in the PROGRAM_SUBFOLDERS)
+ # The following local variables are assured to be present
+ # PF... the project folder
+ # Also, the paths in PATHS will be added to the local variable PATHS
+ # as well as G.PROJECT_ENV and G.ENV
+
+ ID: "'py'"
+ KIT: "os.path.join(PF, 'artefacts', 'kit')"
+ PROGRAM_SUBFOLDERS: "['CONFIG', 'ARTEFACTS', 'ARTEFACTS_SHARED']"
+ PATHS:
+  RAW: "os.path.join(PF, 'data', 'raw')"  # the original unprocessed data
+  INPUT: "os.path.join(PF, 'data', 'input')"  # the data that will be used
+  CONFIG: "os.path.join(PF, 'configs')"  # where to find the configs, 
+  ARTEFACTS: "os.path.join(PF, 'artefacts')"  # artefacts that are only of interest for the performed job
+  ARTEFACTS_SHARED: "os.path.join(PF, 'artefacts')"  # artefacts that are also interested for other jobs (e.g. hyper-parameters)
+ CONFIGS:
+  PB: "100"
+  NUM_WORKERS: "4"
+  PM: "True"

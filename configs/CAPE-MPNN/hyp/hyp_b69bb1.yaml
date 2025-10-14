@@ -1,0 +1,48 @@
+---
+ COMMAND: "cape-mpnn.py"
+ HYPERPARAMETERS:
+  mhc_1_alleles:
+   KIND: "fixed:str"
+   VALUE: "b69bb1"
+  base_model_name:
+   KIND: "fixed:str"
+   VALUE: "v_48_020"
+  beta:
+   KIND: "log_uniform:float"
+   MIN: 0.001
+   MAX: 0.2
+  reload_data_every_n_epochs:
+   KIND: "fixed:int"
+   VALUE: 2
+  temperature:
+   KIND: "uniform:float"
+   MIN: 0.01
+   MAX: 1.0
+  num_epochs:
+   KIND: "fixed:int"
+   VALUE: 20
+  lr:
+   KIND: "log_uniform:float"
+   MIN: 1e-7
+   MAX: 1e-3
+  num_examples_per_epoch:
+   KIND: "fixed:int"
+   VALUE: 1000000
+  batch_size:
+   KIND: "fixed:int"  # "uniform:int"
+   VALUE: 10000
+   # MIN: 2000
+   # MAX: 5000
+  max_protein_length:
+   KIND: "fixed:int"
+   VALUE: 10000  # 2000
+  mhc_1_predictor:
+   KIND: "fixed:str"
+   VALUE: "pwm_dynamic"
+  rescut:
+   KIND: "fixed:float"
+   VALUE: 3.5
+  job:
+   KIND: "env:str"
+   NAME: "HOSTNAME"
+   EVAL: "lambda x: x.split('-')[-1]"

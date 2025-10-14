@@ -1,0 +1,26 @@
+name: cape
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10.14
+  - matplotlib=3.8
+  - seaborn=0.12
+  - openmm=8.0.0
+  - scipy=1.14.0
+  - pdbfixer=1.9
+  - pip=24.3
+  - pip:
+      - pyyaml==6.0.1
+      - tqdm==4.66.1
+      - numpy==1.26.0
+      - pandas==2.1.1
+      - biopython==1.81
+      - blosum==2.0.3
+      - python-Levenshtein==0.25.1
+      - py3Dmol==2.0.4
+      - torch==2.0.1
+      - regex==2023.8.8
+      - requests==2.32.3
+      - notebook==7.0.4
+      - ipywidgets==8.1.3
+

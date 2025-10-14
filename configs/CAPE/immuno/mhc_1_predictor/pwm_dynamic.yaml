@@ -1,0 +1,7 @@
+---
+ PREDICTOR_MHC_I:
+  NAME: "'Mhc1PredictorPwm'"
+  FOLDER: "os.path.join(G.ENV.INPUT, 'immuno', 'mhc_1', 'Mhc1PredictorPwm')"
+  LIMIT: "'dynamic'"
+  LIMIT_CALIBRATION: "0.02"
+  LENGTHS: "[8, 9, 10]"
