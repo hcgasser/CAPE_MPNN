@@ -4,7 +4,7 @@ from enum import Enum
 import numpy as np
 import pandas as pd
 
-import Levenshtein
+from rapidfuzz.distance import Levenshtein
 
 from kit.loch.utils import get_seq_hash
 from kit.loch.path import get_pdb_file_path
